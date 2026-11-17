@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FoodDeliveryApp"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".Activity.SetupRestaurantActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AllRestaurantsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AdminDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.RatingDialogActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AddFoodActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.RestaurantDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AddAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.DishDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AllFoodsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.CategoryFoodsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.RestaurantHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.OrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.IntroActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

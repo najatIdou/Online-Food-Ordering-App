@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:title="My Cart"
+        app:titleTextColor="@color/black"
+        app:navigationIcon="@drawable/back" />
+
+    <!-- Empty the cart button -->
+    <ImageView
+        android:id="@+id/emptyCartBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/delete"
+        app:tint="@color/brown"
+        android:layout_gravity="right"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar"
+        android:visibility="gone"/>
+
+    <!-- Cart Items List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cartRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:layout_weight="1"
+        android:padding="8dp"/>
+
+    <!-- Empty Cart Layout -->
+    <LinearLayout
+        android:id="@+id/empty_cart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:gravity="center"
+        android:background="#F5F5F5">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your cart is empty"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+
+        <!-- Browse Food Button -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Add some items to get started!"
+            android:textSize="15sp"
+            android:textColor="@color/gray"/>
+        <Button
+            android:id="@+id/browseFoodBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Browse Food"
+            android:layout_margin="32dp"
+            android:backgroundTint="@color/brown"
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <!-- Payment Layout -->
+    <LinearLayout
+        android:id="@+id/paymentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:visibility="visible"
+        android:gravity="center_vertical"
+        android:background="#F5F5F5">
+
+        <TextView
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="Total:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/totalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/brown"/>
+
+        <View
+            android:layout_width="9dp"
+            android:layout_height="3dp"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/Paymentbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/brown"
+            android:text="Payment"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</LinearLayout>

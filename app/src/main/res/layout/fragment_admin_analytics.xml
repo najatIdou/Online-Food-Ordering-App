@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="Order Status Distribution"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp">
+
+            <!-- Order Count Layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <!-- Completed Orders -->
+                <TextView
+                    android:id="@+id/tvCompleted"
+                    android:text="Completed: 0"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:background="#E0F7FA"
+                    android:layout_margin="4dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <!-- Pending Orders -->
+                <TextView
+                    android:id="@+id/tvPending"
+                    android:text="Pending: 0"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:background="#FFF3E0"
+                    android:layout_margin="4dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <!-- Accepted Orders -->
+                <TextView
+                    android:id="@+id/tvAccepted"
+                    android:text="Accepted: 0"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:background="#E8F5E9"
+                    android:layout_margin="4dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="4dp">
+
+                <!-- Cancelled Orders -->
+                <TextView
+                    android:id="@+id/tvCancelled"
+                    android:text="Cancelled: 0"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:background="#d5d5d5"
+                    android:layout_margin="4dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <!-- Rejected Orders -->
+                <TextView
+                    android:id="@+id/tvRejected"
+                    android:text="Rejected: 0"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:background="#FFEBEE"
+                    android:layout_margin="4dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Top Restaurants List -->
+        <TextView
+            android:text="Top Restaurants"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tvTopRestaurants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:nestedScrollingEnabled="false"/>
+
+        <!-- Revenue Breakdown -->
+        <TextView
+            android:text="Revenue Breakdown"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:background="#F5F5F5"
+            android:padding="12dp">
+
+            <!-- Today's Revenue -->
+            <TextView
+                android:id="@+id/tvRevenueToday"
+                android:text="Today: $0.00"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"/>
+
+            <!-- Week's Revenue -->
+            <TextView
+                android:id="@+id/tvRevenueWeek"
+                android:text="This Week: $0.00"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"/>
+
+            <!-- Month's Revenue -->
+            <TextView
+                android:id="@+id/tvRevenueMonth"
+                android:text="This Month: $0.00"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Users Growth -->
+        <TextView
+            android:text="User Growth"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:background="#F5F5F5"
+            android:padding="12dp">
+
+            <!-- New Customers -->
+            <TextView
+                android:id="@+id/tvNewCustomers"
+                android:text="New Customers (This Week): +0"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"/>
+
+            <!-- New Restaurants -->
+            <TextView
+                android:id="@+id/tvNewRestaurants"
+                android:text="New Restaurants (This Week): +0"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
